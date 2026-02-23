@@ -4,6 +4,9 @@ return {
     opts = {
       servers = {
         ruff = {},
+        pint = {},
+        djlint = {},
+        biome = {},
         pyright = {
           settings = {
             pyright = {
