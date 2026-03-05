@@ -14,7 +14,7 @@ return {
       "docker-compose-language-service",
       "docker-language-server",
       "djlint",
-      "eslint",
+      "eslint-lsp",
       "gofumpt",
       "goimports",
       "golangci-lint",
