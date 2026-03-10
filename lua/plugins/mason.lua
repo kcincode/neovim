@@ -31,6 +31,8 @@ return {
       "stylua",
       "tailwindcss-language-server",
       "vtsls",
+      "elixir-ls",
+      "nextls",
     },
   },
 }
