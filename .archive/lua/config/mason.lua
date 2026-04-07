@@ -1,0 +1,41 @@
+vim.pack.add({
+	{ src = "https://github.com/mason-org/mason.nvim" },
+	{ src = "https://github.com/mason-org/mason-lspconfig.nvim" },
+	{ src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
+})
+require("mason").setup({
+	max_concurrent_installers = 7,
+})
+require("mason-tool-installer").setup({
+	ensure_installed = {
+		"pyright",
+		"biome",
+		"cssls",
+		"djlint",
+		"docker_compose_language_service",
+		"docker_language_server",
+		"dockerls",
+		"erb-formatter",
+		"erb-lint",
+		"eslint",
+		"gofumpt",
+		"goimports",
+		"gopls",
+		"hadolint",
+		"html",
+		"intelephense",
+		"jsonls",
+		"lua_ls",
+		"oxlint",
+		"php-cs-fixer",
+		"phpcs",
+		"pint",
+		"prettier",
+		"rubocop",
+		"ruby_lsp",
+		"ruff",
+		"shfmt",
+		"stylua",
+		"tailwindcss",
+	},
+})
