@@ -7,9 +7,9 @@ return {
         pint = {},
         djlint = {},
         biome = {},
-        pyright = {
+        basedpyright = {
           settings = {
-            pyright = {
+            basedpyright = {
               disableOrganizeImports = true,
               analysis = {
                 typeCheckingMode = "off",

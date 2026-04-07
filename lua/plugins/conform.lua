@@ -15,6 +15,8 @@ return {
       blade = { "blade-formatter" },
       php = { "pint", "php-cs-fixer" },
       python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
+      ruby = { "rubocop" },
+      eruby = { "erb_format" },
     },
   },
 }
