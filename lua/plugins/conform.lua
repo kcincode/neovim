@@ -19,6 +19,7 @@ return {
         javascript = { "oxfmt" },
         typescriptreact = { "oxfmt" },
         javascriptreact = { "oxfmt" },
+        php = { "pint" },
       },
       -- The options you set here will be merged with the builtin formatters.
       -- You can also define any custom formatters here.

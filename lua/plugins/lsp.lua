@@ -22,8 +22,9 @@ return {
           },
         },
       },
-      python = {},
+      ruff = {},
       cssls = {},
+      phpactor = {},
     },
   },
 }
