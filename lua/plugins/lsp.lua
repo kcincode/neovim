@@ -3,9 +3,9 @@ return {
   opts = {
     servers = {
       -- pyright will be automatically installed with mason and loaded with lspconfig
-      basedpyright = {
+      pyright = {
         settings = {
-          basedpyright = {
+          pyright = {
             disableOrganizeImports = true,
             analysis = {
               typeCheckingMode = "off",
