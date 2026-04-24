@@ -218,9 +218,12 @@ local lsp_servers = {
 	cssls = {},
 	phpactor = {},
 	basedpyright = {
-		analysis = {
-			autoSearchPaths = true,
-			diagnosticMode = "openFilesOnly",
+		basedpyright = {
+			analysis = {
+				autoSearchPaths = true,
+				diagnosticMode = "openFilesOnly",
+				typeCheckingMode = "off",
+			},
 		},
 	},
 	lua_ls = {
@@ -239,10 +242,20 @@ vim.pack.add({
 	"https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim", -- auto installer
 }, { confirm = false })
 
+local mason_pkgs = {
+	"shfmt",
+	"oxfmt",
+	"prettier",
+	"ruff",
+	"djlint",
+}
+local lsp_pkgs = vim.tbl_keys(lsp_servers)
+table.move(lsp_pkgs, 1, #lsp_pkgs, #mason_pkgs + 1, mason_pkgs)
+
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("mason-tool-installer").setup({
-	ensure_installed = vim.tbl_keys(lsp_servers),
+	ensure_installed = mason_pkgs,
 })
 
 -- configure each lsp server on the table
@@ -341,6 +354,7 @@ require("conform").setup({
 		javascriptreact = { "oxfmt", "prettier", stop_after_first = true },
 		typescriptreact = { "oxfmt", "prettier", stop_after_first = true },
 		json = { "oxfmt", "prettier", stop_after_first = true },
+		htmldjango = { "djlint" },
 		xml = { "prettier" },
 	},
 })
