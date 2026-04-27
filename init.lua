@@ -245,6 +245,7 @@ vim.pack.add({
 local mason_pkgs = {
 	"shfmt",
 	"oxfmt",
+	"oxlint",
 	"prettier",
 	"ruff",
 	"djlint",
@@ -349,11 +350,11 @@ require("conform").setup({
 		sh = { "shfmt" },
 		lua = { "stylua" },
 		python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
-		javascript = { "oxfmt", "prettier", stop_after_first = true },
-		typescript = { "oxfmt", "prettier", stop_after_first = true },
-		javascriptreact = { "oxfmt", "prettier", stop_after_first = true },
-		typescriptreact = { "oxfmt", "prettier", stop_after_first = true },
-		json = { "oxfmt", "prettier", stop_after_first = true },
+		javascript = { "oxfmt", "oxlint" },
+		typescript = { "oxfmt", "oxlint" },
+		javascriptreact = { "oxfmt", "oxlint" },
+		typescriptreact = { "oxfmt", "oxlint" },
+		json = { "oxfmt" },
 		htmldjango = { "djlint" },
 		xml = { "prettier" },
 	},
@@ -425,6 +426,10 @@ require("oil").setup({
 })
 
 vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+vim.pack.add({
+	{ src = "https://github.com/github/copilot.vim" },
+}, { confirm = false })
 
 -- Highlight on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
