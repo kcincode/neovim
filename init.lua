@@ -9,6 +9,9 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- scoll off better display
+vim.opt.scrolloff = 10
+
 -- enable mouse mode, can be useful for resizing splits
 vim.opt.mouse = "a"
 
@@ -300,6 +303,7 @@ local pickers = require("telescope.builtin")
 vim.keymap.set("n", "<leader>sp", pickers.builtin, { desc = "[S]earch Builtin [P]ickers" })
 vim.keymap.set("n", "<leader>sb", pickers.buffers, { desc = "[S]earch [B]uffers" })
 vim.keymap.set("n", "<leader>sf", pickers.find_files, { desc = "[S]earch [F]iles" })
+vim.keymap.set("n", "<leader><leader>", pickers.find_files, { desc = "[S]earch [F]iles" })
 vim.keymap.set("n", "<leader>sw", pickers.grep_string, { desc = "[S]earch Current [W]ord" })
 vim.keymap.set("n", "<leader>sg", pickers.live_grep, { desc = "[S]earch by [G]rep" })
 vim.keymap.set("n", "<leader>sr", pickers.resume, { desc = "[S]earch [R]esume" })
@@ -355,6 +359,8 @@ require("conform").setup({
 		javascriptreact = { "oxfmt", "oxlint" },
 		typescriptreact = { "oxfmt", "oxlint" },
 		json = { "oxfmt" },
+		jsonc = { "oxfmt" },
+		css = { "oxfmt" },
 		htmldjango = { "djlint" },
 		xml = { "prettier" },
 	},
