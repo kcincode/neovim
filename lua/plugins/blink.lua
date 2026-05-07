@@ -41,12 +41,12 @@ require("blink.cmp").setup({
 		implementation = "lua",
 	},
 
-	cmdline = {
-		keymap = {
-			preset = "inherit",
-			["<CR>"] = { "select_and_accept", "fallback" },
-		},
-	},
+	-- cmdline = {
+	-- 	keymap = {
+	-- 		preset = "inherit",
+	-- 		["<CR>"] = { "select_and_accept", "fallback" },
+	-- 	},
+	-- },
 
 	sources = { default = { "lsp" } },
 })

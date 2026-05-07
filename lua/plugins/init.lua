@@ -1,4 +1,5 @@
 require("plugins.blink")
+require("plugins.bufferline")
 require("plugins.catppuccin")
 require("plugins.conform")
 require("plugins.copilot")
