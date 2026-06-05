@@ -11,7 +11,7 @@ local lsp_servers = {
 			analysis = {
 				autoSearchPaths = true,
 				diagnosticMode = "openFilesOnly",
-				typeCheckingMode = "all",
+				typeCheckingMode = "off",
 			},
 		},
 	},
