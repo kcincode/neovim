@@ -34,7 +34,16 @@ vim.keymap.set("n", "]b", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 vim.keymap.set("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 vim.keymap.set("n", "<leader>bd", "<cmd>:bd<cr>", { desc = "Delete Buffer" })
-vim.keymap.set("n", "<leader>bo", "<cmd>:bo<cr>", { desc = "Delete Other Buffers" })
+local function close_all_but_current()
+	local current_buf = vim.api.nvim_get_current_buf()
+	local bufs = vim.api.nvim_list_bufs()
+	for _, buf in ipairs(bufs) do
+		if buf ~= current_buf then
+			vim.api.nvim_buf_delete(buf, { force = true })
+		end
+	end
+end
+vim.keymap.set("n", "<leader>bo", close_all_but_current, { desc = "Close all buffers except current" })
 
 vim.keymap.set("n", "n", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next Search Result" })
 vim.keymap.set("x", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
