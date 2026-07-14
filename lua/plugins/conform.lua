@@ -15,6 +15,7 @@ require("conform").setup({
 		css = { "oxfmt" },
 		htmldjango = { "djlint" },
 		xml = { "prettier" },
+		go = { "gofmt" },
 	},
 })
 vim.api.nvim_create_autocmd("BufWritePre", {

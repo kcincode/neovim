@@ -5,6 +5,7 @@
 local lsp_servers = {
 	ruff = {},
 	cssls = {},
+	gopls = {},
 	phpactor = {},
 	basedpyright = {
 		basedpyright = {
@@ -39,6 +40,7 @@ local mason_pkgs = {
 	"prettier",
 	"ruff",
 	"djlint",
+	"gopls",
 }
 local lsp_pkgs = vim.tbl_keys(lsp_servers)
 table.move(lsp_pkgs, 1, #lsp_pkgs, #mason_pkgs + 1, mason_pkgs)
