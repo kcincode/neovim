@@ -7,9 +7,11 @@ local lsp_servers = {
 	cssls = {},
 	gopls = {},
 	phpactor = {},
-	oxfmt = {
-		enabled = false,
-	},
+    ts_ls = {},
+    eslint = {},
+    oxfmt = {
+        enabled=false
+    },
 	oxlint = {
 		root_dir = function(bufnr, on_dir)
 			-- prefer the top-level oxlint config if it exists (monorepo support)
@@ -21,7 +23,9 @@ local lsp_servers = {
 			end
 		end,
 		settings = {
-			fixKind = "all",
+			fixKind = "safe_fix_or_suggestion",
+            typeAware = true,
+            unusedDisableDirectives = "warn",
 		},
 	},
 	basedpyright = {
