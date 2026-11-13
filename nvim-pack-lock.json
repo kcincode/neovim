@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "avante.nvim": {
+      "rev": "0a4f93f779d3e9726904aded429719880b2612c9",
+      "src": "https://github.com/yetone/avante.nvim"
+    },
     "blink.cmp": {
       "rev": "959bbf79a40403f07d64cfc847b9ab6eaf95c77c",
       "src": "https://github.com/saghen/blink.cmp"
@@ -24,6 +28,14 @@
       "rev": "a12fd5672110c8aa7e3c8419e28c96943ca179be",
       "src": "https://github.com/github/copilot.vim"
     },
+    "fff": {
+      "rev": "0ab67dc60a4c013f94ccb96dfe08dd6230e7f185",
+      "src": "https://github.com/dmtrKovalenko/fff"
+    },
+    "fzf-lua": {
+      "rev": "ded1c96d3d9d74634287d722431c26690968a4bf",
+      "src": "https://github.com/ibhagwan/fzf-lua"
+    },
     "lazygit.nvim": {
       "rev": "a04ad0dbc725134edbee3a5eea29290976695357",
       "src": "https://github.com/kdheepak/lazygit.nvim"
@@ -39,6 +51,18 @@
     "mason.nvim": {
       "rev": "12ddd182d9efbdc848b540f16484a583d52da0fb",
       "src": "https://github.com/mason-org/mason.nvim"
+    },
+    "mega.cmdparse": {
+      "rev": "47ea5b1b23059fbb79a8e262002f32e7cd8aed90",
+      "src": "https://github.com/ColinKennedy/mega.cmdparse"
+    },
+    "mega.logging": {
+      "rev": "194ad8c300186e73c3eb1ebeb3ede42eb219be3b",
+      "src": "https://github.com/ColinKennedy/mega.logging"
+    },
+    "nui.nvim": {
+      "rev": "10fc361835c856ba4233ef5ea135b919bf3dce97",
+      "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-lspconfig": {
       "rev": "81878de76c0de4ce289513734ad80c31ec7871b8",
