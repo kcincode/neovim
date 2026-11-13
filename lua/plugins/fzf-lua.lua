@@ -5,7 +5,14 @@ vim.pack.add({
 }, { confirm = false })
 
 local pickers = require("fzf-lua")
-pickers.setup({})
+pickers.setup({
+	files = {
+		no_ignore = true,
+		find_opts = [[-type f \! -path '*/.git/*' \! -path '*/.jj/*' \! -path '*/node_modules/*' \! -path '*/.venv/*']],
+		rg_opts = [[--color=never --files -g "!.git" -g "!.jj" -g "!node_modules" -g "!.venv"]],
+		fd_opts = [[--color=never --type f --type l --exclude .git --exclude .jj --exclude node_modules --exclude .venv]],
+	},
+})
 pickers.register_ui_select()
 
 vim.keymap.set("n", "<leader><leader>", pickers.files, { desc = "[S]earch [F]iles" })
